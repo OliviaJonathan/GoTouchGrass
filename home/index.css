@@ -117,8 +117,11 @@ main{
     height: auto;
     display: block;
     padding: 5px;
-    cursor: pointer; /* Indicate clickability */
+    cursor: pointer; 
+    top: auto;
+    left: auto;
   }
+
   
   .dropdown-image:hover {
     background-color: #f0f0f0;
@@ -128,38 +131,63 @@ main{
     position: absolute; /* Or fixed, relative, etc. */
      /* Adjust as needed */
     width: 5vw;
-    height: 5vw;
-    border: 2px dashed #ccc; /* Visual indicator */
+    height: 15vh;
   }
+
 
   #target-spot-1 {
     top: 50vh;
     left: 2vw;
+    background-image: url('../src/Fungi.png');
+    opacity: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
   }
   
   #target-spot-2 {
     top: 50vh;
     left: 10vw;
+    background-image: url('../src/Bryophta.png');
+    opacity: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
   
   #target-spot-3 {
     top: 50vh;
     left: 18vw;
+    background-image: url('../src/Algae.png');
+    opacity: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
 
   #target-spot-4 {
     top: 65vh;
     left: 2vw;
+    background-image: url('../src/Pteridophyta.png');
+    opacity: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
   
   #target-spot-5 {
     top: 65vh;
     left: 10vw;
+    background-image: url('../src/Gymnosperms.png');
+    opacity: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
   
   #target-spot-6 {
     top: 65vh;
     left: 18vw;
+    background-image: url('../src/Angiosperm.png');
+    opacity: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
   
   .target-spot img {
@@ -168,6 +196,7 @@ main{
       height: 100%;
       top: 0;
       left: 0;
+      display:block;
   }
 
  

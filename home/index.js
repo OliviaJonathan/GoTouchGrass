@@ -91,60 +91,31 @@ async function identifyPlant(file) {
     };
 }
 
-//dropdown button
-const B = document.querySelectorAll('.dropdown-button');
-const C = document.querySelectorAll('.dropdown-content');
-const I = document.querySelectorAll('.dropdown-images');
 
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-    if (!event.target.matches('.dropdown-button')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
-
-
-
-function MyFunction() {
+function DropdownFunction() {
     document.querySelector(".dropdown-content").classList.toggle("show");
 }
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-    if (!event.target.matches('.dropdown-button')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
+
+function ChangePos(num){
+    //const image = document.getElementById("Image1");
+
+    const images = document.querySelectorAll(".dropdown-image");
+    const target = document.querySelector("#target-spot-"+ num);
+
+   images.forEach((image,index) =>{
+    if (index+1 === num){
+    if(image.style.opacity == 1){
+        image.style.opacity = 0.5;
+        target.style.opacity = 1;
     }
+    else{
+        image.style.opacity = 1 
+        target.style.opacity = 0
+    }
+    }
+})
+    
 }
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.dropdown-image');
-
-    images.forEach(image => {
-        image.addEventListener('click', function() {
-            const targetId = image.dataset.targetId;
-            const target = document.getElementById(targetId);
-
-            if (target) {
-                const clonedImage = this.cloneNode(true);
-                target.innerHTML = ''; // Clear existing content
-                target.appendChild(clonedImage);
-            }
-        });
-    });
-});

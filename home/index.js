@@ -43,7 +43,7 @@ async function identifyPlant(file) {
         const base64Image = reader.result.split(',')[1]; // Extract base64 data
         console.log("Base64 Image Data (First 100 chars):", base64Image.substring(0, 100));
     
-        const apiKey = "QV0GK7zdEok9dVWzJecF2c3A5XkyYhfsgc3WG9xV7RLJBq06dq";
+        const apiKey = "API Key goes here";
         const apiUrl = "https://plant.id/api/v3/identification?details=common_names,url,description,taxonomy,rank,gbif_id,inaturalist_id,image,edible_parts,watering,common_uses,cultural_significance&language=en";
 
         const requestBody = {
